@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C & J Souvenirs Shop | Boracay Accessories & Watches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #c99700;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --accent: #8b0000;
+        }
+
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a67c00;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            display: block;
+            margin: 8px auto 0;
+        }
+
+        /* Category Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 0 5% 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Location & Contact */
+        .info-section {
+            background-color: #fff;
+            padding: 50px 5%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">C & J SOUVENIRS</div>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#location">Visit Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>C & J Souvenirs Shop</h1>
+        <p>Your one-stop souvenir shop in Boracay for premium quality jewelry, stylish watches, and local keepsakes.</p>
+        <a href="#location" class="btn">Find Our Shop</a>
+    </section>
+
+    <!-- Product Highlights -->
+    <h2 class="section-title" id="products">Featured Products</h2>
+    <section class="grid">
+        <div class="card">
+            <div class="card-icon">💍</div>
+            <h3>Statement Rings</h3>
+            <p>Carved lion heads, dragon crests, Masonic symbols, and stylish stainless steel gold rings.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">📿</div>
+            <h3>Gold-Tone Chains</h3>
+            <p>Elegant Italian-inspired gold-plated necklaces and classic chain sets.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">⌚</div>
+            <h3>Sports & Tactical Watches</h3>
+            <p>Durable digital and analog sports watches in vibrant colors and rugged designs.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">⏱️</div>
+            <h3>Classic & Dress Watches</h3>
+            <p>Premium stainless steel wristwatches, Japanese quartz designs, and casual timepieces.</p>
+        </div>
+    </section>
+
+    <!-- Location and Details -->
+    <section class="info-section" id="location">
+        <div class="info-container">
+            <div class="info-box">
+                <h3>📍 Store Location</h3>
+                <p><strong>C & J Souvenirs Shop</strong></p>
+                <p>Talipapa Bukid, Manoc-Manoc</p>
+                <p>Malay, Aklan (Boracay Island)</p>
+                <p>Philippines</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🛍️ What We Offer</h3>
+                <p>• Stainless steel & gold-tone jewelry</p>
+                <p>• Men’s & Women’s Wristwatches</p>
+                <p>• Boracay souvenirs & local gifts</p>
+                <p>• Affordable price & friendly service</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📞 Customer Service</h3>
+                <p>Visit us in person at Talipapa Bukid to check out our full collection!</p>
+                <br>
+                <a href="https://maps.google.com/?q=Talipapa+Bukid+Manoc-Manoc+Malay+Aklan" target="_blank" class="btn" style="padding: 8px 18px; font-size: 0.9rem;">Open in Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 C & J Souvenirs Shop. Talipapa Bukid, Manoc-Manoc, Malay, Aklan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
